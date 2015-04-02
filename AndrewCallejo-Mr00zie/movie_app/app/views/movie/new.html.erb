@@ -1,0 +1,23 @@
+<h2>New Movie</h2>
+
+<%= form_for :movie, url: movie_index_path do |f| %> 
+<!-- movie_index_path = 'movie/' to action "create" -->
+  <p>
+    <%= f.label :title %><br>
+    <%= f.text_field :title %>
+  </p>
+ 
+  <p>
+    <%= f.label :description %><br>
+    <%= f.text_area :description %>
+  </p>
+ 
+  <p>
+    <%= f.label :year_released %><br>
+    <%= f.number_field :year_released %>
+  </p>
+
+  <p>
+    <%= f.submit "Create Movie"%>
+  </p>
+<% end %>

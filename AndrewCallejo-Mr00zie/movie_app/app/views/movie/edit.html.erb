@@ -1,0 +1,28 @@
+<h1>Go ahead an edit what you want!</h1>
+
+<%= @movie.title %>
+
+
+<%= form_for @movie do |f| %> 
+<!-- movie_path = 'movie/:id' go to action "update"-->
+  <p>
+    <%= f.label :title %><br>
+    <%= f.text_field :title %>
+  </p>
+ 
+  <p>
+    <%= f.label :description %><br>
+    <%= f.text_area :description %>
+  </p>
+ 
+  <p>
+    <%= f.label :year_released %><br>
+    <%= f.number_field :year_released %>
+  </p>
+
+  <p>
+    <%= f.submit "Update Movie"%>
+  </p>
+<% end %>
+
+

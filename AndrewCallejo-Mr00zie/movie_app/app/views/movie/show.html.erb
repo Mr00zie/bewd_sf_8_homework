@@ -1,0 +1,18 @@
+<h2>Movie Information</h2>
+
+<%= form_tag("/search", method: "get") do %>
+  <%= label_tag(:id, "Search for:") %>
+  <%= text_field_tag(:id) %>
+  <%= submit_tag("Search") %>
+<% end %>
+
+
+
+<p>Title: <%= @movie.title %></p>
+
+<p>Description: <%= @movie.description %></p>
+
+<p>Year: <%= @movie.year_released %></p>
+
+<%= link_to "Back", movie_index_path %>
+<%= link_to "Edit", "/movie/#{@movie.id}/edit/" %>

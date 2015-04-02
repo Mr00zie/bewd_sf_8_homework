@@ -1,0 +1,14 @@
+<h1>Your Search Results</h1>
+<!-- studey the below.  from array into  -->
+<% @movies.each do |movie| %> 
+
+	<p>Title: <%= movie.title %></p>
+
+	<p>Description: <%= movie.description %></p>
+
+	<p>Year: <%= movie.year_released %></p>
+
+	<%= link_to "Back", movie_index_path %>
+	<%= link_to "Edit", "/movie/edit" %>
+
+<% end %>

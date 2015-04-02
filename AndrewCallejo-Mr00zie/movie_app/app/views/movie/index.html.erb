@@ -1,0 +1,25 @@
+<h1>Welcome to the movie app!</h1>
+<p>See our collection of movies below or use our Search!</p>
+
+<%= form_tag("/search", method: "get") do %>
+  <%= label_tag(:id, "Search for:") %>
+  <%= text_field_tag(:id) %>
+  <%= submit_tag("Search") %>
+<% end %>
+
+<ul>
+<%
+  @movies.each do |x|
+%>
+<li>
+  <%= link_to x.title, x %> | <%= x.year_released%> | <%= link_to "Edit", edit_movie_path(x)%>
+  <!-- link to "link name", "movie/index" -->
+  <!-- link to "link name", movie_index_path -->
+  <!-- link to "link name", object -->
+</li>
+<%    
+  end
+%>
+</ul>
+
+<%= link_to "Add New Movie", "/movie/new" %>
