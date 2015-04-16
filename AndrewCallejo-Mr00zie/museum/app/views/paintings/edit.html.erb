@@ -1,0 +1,23 @@
+<h1>Update</h1>
+
+<%= form_for :painting, url: paintings_path do |f| %> 
+<!-- movie_index_path = 'movie/' to action "create" -->
+  <p>
+    <%= f.label :title %><br>
+    <%= f.text_field :title %>
+  </p>
+ 
+  <p>
+    <%= f.label :museum %><br>
+    <%= f.text_area :museum %>
+  </p>
+ 
+  <p>
+    <%= f.label :artist %><br>
+    <%= f.text_field :artist%>
+  </p>
+
+  <p>
+    <%= f.submit "Add Painting"%>
+  </p>
+<% end %>

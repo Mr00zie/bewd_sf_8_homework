@@ -1,0 +1,16 @@
+<h1>Paintings</h1>
+
+<%= form_tag("/search", method: "get") do %>
+  <%= label_tag(:id, "Search for:") %>
+  <%= text_field_tag(:id) %>
+  <%= submit_tag("Search") %>
+<% end %>
+
+<ul>
+<% @paintings.each do |x| %>
+	<li> <%= "#{x['title']} #{x['artist']}" %>
+		<%= if x.images.length > 0 
+		       image_tag(x.images.first.url, size: "50")
+		     end  %></li>
+<% end %>
+</ul>
