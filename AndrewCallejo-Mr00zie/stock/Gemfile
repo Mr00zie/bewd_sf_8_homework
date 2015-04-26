@@ -58,5 +58,7 @@ group :development, :test do
   gem 'pry-rails'
 
   gem 'omniauth-twitter'
+
+  gem 'twitter'
 end
 
