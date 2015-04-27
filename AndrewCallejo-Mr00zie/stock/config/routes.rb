@@ -6,5 +6,5 @@ resources :stock, only: [:new, :index, :show, :edit, :update, :create]
 #match 'auth/:provider/callback', to: ''
 
 post '/stock/search/' => 'stock#search'
-
+get "/:page" => "page#about"
 end

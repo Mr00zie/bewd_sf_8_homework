@@ -39,7 +39,7 @@ class StockController < ApplicationController
 
 		@negative_score = 0
 
-		down_words = ["sell", "bearish", "short", "puts"]
+		down_words = ["sell", "bearish", "short", "puts", "downgraded"]
 
 		down_words.each do |down_word|
 
@@ -66,7 +66,7 @@ class StockController < ApplicationController
 
 		@positive_score = 0
 
-		up_words = ["buy", "bullish", "long", "upgrade"]
+		up_words = ["buy", "bullish", "long", "calls", "upgrade"]
 
 		up_words.each do |up_word|
 
@@ -92,7 +92,5 @@ class StockController < ApplicationController
 	end
 
 
-	def about
-	end
 	
 end
