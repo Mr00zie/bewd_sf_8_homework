@@ -23,11 +23,11 @@ class StockController < ApplicationController
 		@stock = Stock.find(params[:id])
 	end
 
-	def update
-		@stock = Stock.create(params.require(:stock).permit(:x, :x, :x))
-		@stocks_path.save
-		redirect_to stocks_path
-	end
+	#def update
+		#@stock = Stock.create(params.require(:stock).permit(:x, :x, :x))
+		#@stocks_path.save
+		#redirect_to stocks_path
+	#end
 
 	def edit 
 	end
@@ -35,7 +35,7 @@ class StockController < ApplicationController
 	def search
 		@keyword = params[:keywords];
 
-		# caculate the down score, [sell, bearish, short, puts]
+		# calcate the down score, [sell, bearish, short, puts]
 
 		@negative_score = 0
 
@@ -43,7 +43,7 @@ class StockController < ApplicationController
 
 		down_words.each do |down_word|
 
-			@keywords = @keyword + " " + down_word	#conbine keywords
+			@keywords = @keyword + " " + down_word	#combine keywords
 
 			@search_result = @@client.search(@keywords, options = 
 			{
@@ -66,7 +66,7 @@ class StockController < ApplicationController
 
 		@positive_score = 0
 
-		up_words = ["buy", "bullish", "long", "calls", "upgrade"]
+		up_words = ["buy", "bullish", "long", "calls", "upgraded"]
 
 		up_words.each do |up_word|
 

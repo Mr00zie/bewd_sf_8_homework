@@ -1,8 +1,32 @@
-<h1>Search Result </h1>
+<head>
+	<style>
 
+	h1 {
+		text-align: center;
+		font-family: sans-serif;
+	}
 
-<p>Negative Score:</p>
-	<%= @negative_score %>
+	h3	{
+		text-align: center;
+		font-family: sans-serif;
+	}
+	
+	</style>
+</head>
 
-<p>Positive Score:</p>
-	<%= @positive_score %>
+<body>
+
+	
+	<h1>Uptick Downtick Results</h1>
+
+		
+		
+			<h3>Negative Score:</h3>
+				<h3><%= @negative_score %></h3>
+					<center><img src="/assets/bulls_bear.JPG" size="cover" align="	absmiddle"></center>
+			
+			<h3>Positive Score:</h3>
+				<h3><%= @positive_score %></h3>
+</body>
+
+	<%= link_to "Back", "/stock" %>
