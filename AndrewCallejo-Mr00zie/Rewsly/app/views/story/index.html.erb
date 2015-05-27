@@ -1,0 +1,25 @@
+<h1>Welcome to Rewsly!</h1>
+ 
+
+
+<%= form_tag("/search", method: "get") do %>
+  <%= label_tag(:id, "Search for:") %>
+  <%= text_field_tag(:id) %>
+  <%= submit_tag("Search") %>
+<% end %>
+
+
+<ul>
+<%
+  @stories.each do |x|
+%>
+<li>
+  <%= x.title %> | <%= x.category %> | <%= x.link %> | <%= x.upvotes %> 
+  <!-- link to "link name", "movie/index" -->
+  <!-- link to "link name", movie_index_path -->
+  <!-- link to "link name", object -->
+</li>
+<%    
+  end
+%>
+</ul>

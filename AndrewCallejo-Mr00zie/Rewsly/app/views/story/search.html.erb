@@ -1,0 +1,16 @@
+<h1>Your Search Results</h1>
+<!-- studey the below.  from array into  -->
+<% @stories.each do |story| %> 
+
+	<p>Title: <%= story.title %></p>
+
+	<p>Category: <%= story.category %></p>
+
+	<p>Link: <%= story.link %></p>
+	
+	<p>Upvotes: <%= story.upvotes %></p>
+
+	<%= link_to "Back", story_index_path %>
+	<%= link_to "Edit", "/story/edit" %>
+
+<% end %>

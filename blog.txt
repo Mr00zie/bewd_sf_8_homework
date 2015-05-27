@@ -1,0 +1,36 @@
+Andrew Callejo www.andrewcallejo.com
+ 
+ Beginning Ruby Class 2
+
+Int = whole numbers
+Float = decimals
+Data Types: cannot make strings into a number vice versa.. have 
+Strings: words letters unless number characters are defined under string
+Int: numbers
+to chg .to_i or .to_s
+Operators (-,/,+,* etc)
+Boolean: cant be added 
+
+METHODS
+
+-helps automate things
+-if you want a robot to do the same thing over and over again you can create a method you can call over and over..define the method(s)
+
+ex. Method would be called "find the car"
+
+-methods are storing data the same way we store values in memory.  gives us a way to give name set of commands
+
+def multiply(x, y)
+	x * y
+end
+
+Methods are like math equations
+
+\n = new line or escape example one\ntwo\nthree\n
+
+gets.chomp removes white space at end of string
+
+4.to_s   . is a method that calls
+
+ls 4
+ 

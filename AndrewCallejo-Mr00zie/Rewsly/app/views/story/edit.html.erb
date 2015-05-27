@@ -1,0 +1,27 @@
+<h1>Go ahead an edit what you want!</h1>
+
+<%= @story.title %>
+
+
+<%= form_for @story do |f| %> 
+
+
+  <p>
+    <%= f.label :title %><br>
+    <%= f.text_field :title %>
+  </p>
+ 
+  <p>
+    <%= f.label :category %><br>
+    <%= f.text_area :category %>
+  </p>
+ 
+  <p>
+    <%= f.label :link %><br>
+    <%= f.number_field :link %>
+  </p>
+
+  <p>
+    <%= f.submit "Update Story"%>
+  </p>
+<% end %>

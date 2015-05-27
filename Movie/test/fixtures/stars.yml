@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  movie: MyString
+  year: 1
+  producer: 1
+
+two:
+  movie: MyString
+  year: 1
+  producer: 1
